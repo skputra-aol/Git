@@ -1,0 +1,35 @@
+// authorization pertama kali set login
+$ ssh-keygen  // Enter passphrase: 1 (ini mirip pwd klo diminta saat git clone/cli) ,goto https://github.com/settings/keys, klik NewSShKeyGen pilih AuthenticationKey, copy isi /home/putra/.ssh/id_rsa.pub
+
+$ git add --all			// copy semua file dan folder 
+$ git add file.txt		// copy file yg ini
+$ git add folderku/		// copy folder
+$ git add folderku/file2.txt	// copy file path
+$ git add .			// copy root files
+$ git add *.txt			// copy *.txt
+$ git add -u			// commit file/folder yg telah didelete di pc
+
+$ git restore file1.txt		// ambil ulang file1.txt dari github	
+
+$ git commit -m "Commentnya"	// commit dengan branch aktif saat ini (harus git add dulu)
+$ 
+$ git branch			// lihat branch
+$ git branch -r			// lihat list branch
+$ git checkout cabang2		// pindah branch
+$ git checkout -b cabangbaru	// buat cabang sekalian pindah branch
+
+
+$ git push origin cabang2	// push ke branch tersebut (bertanya bila ada beda)
+$ git push --force origin main	// push ke branch tersebut (langsung timpa)
+$ git branch -D cabang4		// hapus  branch
+
+$ git show			// lihat yg belum di commit dan yg belum di add file
+$ git log			// lihat list dari yg sudah commit
+
+$ git pull --rebase origin	// mengambil repo github ke lokal , disertai info commit 
+$ git pull --force
+$ git fetch origin master	// mengambil info saja(tanpa file) apakah ada perubahan commit dari github
+$ git diff master origin/master		// melihat beda local dan remote setelah di- (git fetch)
+$ git merge master origin/master	// merge antara repo lokal (master) dengan github(origin/master) 
+
+$ git clone git@github.com:skputra-aol/original.git  ///clone
